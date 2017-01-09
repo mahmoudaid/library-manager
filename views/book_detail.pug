@@ -40,4 +40,5 @@ table
         td #{loan.return_by}
         td #{loan.returned_on}
         td
-          a.button(href='/books/' + book.id + '/return') Return Book
+          if !loan.returned_on
+            a.button(href='/books/' + book.id + '/return') Return Book
